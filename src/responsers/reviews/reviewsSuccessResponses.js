@@ -3,8 +3,8 @@ export const reviewsGettedResponse = (req, res, data, type) => {
     timestamp: new Date().toISOString(),
     path: req.originalUrl,
     status: 200,
-    code: "REVIEWS_GETTED",
-    message: type === "BOOK" ? "All reviews of book successfully getted!" : "All reviews of user successfully getted!",
+    code: "REVIEWS_FETCHED",
+    message: type === "BOOK" ? "All reviews of book successfully fetched!" : "All reviews of user successfully fetched!",
     content: data || "",
   };
   res.status(200).json(response);

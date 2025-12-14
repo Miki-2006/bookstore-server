@@ -15,7 +15,7 @@ export const UserLoggedResponse = (req, res, data) => {
         path: req.originalUrl,
         status: 200,
         code: "USER_LOGGED",
-        message: "New user successfully logged in!",
+        message: "User successfully logged in!",
         content: data || ''
     }
     res.status(200).json(response)

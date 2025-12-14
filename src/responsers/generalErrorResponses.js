@@ -5,7 +5,7 @@ export const databaseErrorResponse = (req, res, error) => {
         status: 500,
         code: "DATABASE_ERROR",
         message: "Something went wrong in database!",
-        details: error.message
+        details: error
     }
     res.status(500).json(response)
 }

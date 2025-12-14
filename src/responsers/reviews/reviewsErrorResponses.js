@@ -4,7 +4,7 @@ export const reviewsErrorResponse = (req, res, error) => {
         path: req.originalUrl,
         status: 400,
         code: "REVIEWS_ERROR",
-        message: type === "BOOK" ? "Can not get reviews of book!" : "Can not get reviews of user!",
+        message: "Some error occurred while fetching reviews!",
         details: error
     }
     res.status(400).json(response)
