@@ -11,7 +11,7 @@
 
 ## Swagger UI, Postman API
 - [Explore Swagger UI](https://app.swaggerhub.com/apis/qucompany/init/1.0.0)
-- [Explore Postman API](https://.postman.co/workspace/My-Workspace~cefe9a8c-a8d6-40a1-8175-ab28c5c0b186/collection/34477062-b571b746-c612-40a2-b9ed-e7be038ae2ce?action=share&creator=34477062)
+- [Explore Postman API](https://documenter.getpostman.com/view/34477062/2sB3dTs7ub)
 
 <br>
 <br>
