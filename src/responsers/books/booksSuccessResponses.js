@@ -15,7 +15,7 @@ export const addBookSuccessResponse = (req, res) => {
     timestamp: new Date().toISOString(),
     path: req.originalUrl,
     status: 201,
-    code: "BOOKS_ADDED",
+    code: "BOOK_ADDED",
     message: "New book added successfully!",
   };
   res.status(201).json(response);
