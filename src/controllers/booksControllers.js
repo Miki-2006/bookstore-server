@@ -21,7 +21,7 @@ export const getAllBooks = async (req, res) => {
 export const getBestSellers = async (req, res) => {
 
     try {
-        const {data, error} = await supabase.from('bestseller').select('*')
+        const {data, error} = await supabase.from('bestseller').select("id, created_at, book:book!bestseller_book_id_fkey(*)")
         if (data) {
             allBooksGettedResponse(req, res, data)
         } else if (error) {
@@ -35,7 +35,7 @@ export const getBestSellers = async (req, res) => {
 export const getNewReleases = async (req, res) => {
 
     try {
-        const {data, error} = await supabase.from('newrelease').select('*')
+        const {data, error} = await supabase.from('newrelease').select("id, created_at, book:book!newrelease_book_id_fkey(*)")
         if (data) {
             allBooksGettedResponse(req, res, data)
         } else if (error) {
