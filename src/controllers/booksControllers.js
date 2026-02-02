@@ -17,6 +17,36 @@ export const getAllBooks = async (req, res) => {
     }
 }
 
+
+export const getBestSellers = async (req, res) => {
+
+    try {
+        const {data, error} = await supabase.from('bestseller').select('*')
+        if (data) {
+            allBooksGettedResponse(req, res, data)
+        } else if (error) {
+            booksErrorResponse(req, res, error)
+        }
+    } catch (error) {
+        databaseErrorResponse(req, res, error)
+    }
+}
+
+export const getNewReleases = async (req, res) => {
+
+    try {
+        const {data, error} = await supabase.from('newrelease').select('*')
+        if (data) {
+            allBooksGettedResponse(req, res, data)
+        } else if (error) {
+            booksErrorResponse(req, res, error)
+        }
+    } catch (error) {
+        databaseErrorResponse(req, res, error)
+    }
+}
+
+
 export const addNewBook = async (req, res) => {
     const {title, author, description, quantity, price, category} = req.body
 
