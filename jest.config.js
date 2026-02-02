@@ -1,4 +1,3 @@
-export default {
-    testEnvironment: "node",
-    setupFiles: ['dotenv/config']
-}
+export default async () => {
+  return { verbose: true };
+};
