@@ -22,8 +22,8 @@ app.use(
 app.use(express.json());
 app.use("/api", mainRouter);
 app.get("/", (req, res) => {
-  const { name } = req.body;
-  res.send(`Welcome to bookstore server ${name}!!!`);
+  res.status(200).send("Server is running!!!");
 });
+
 
 export default app;
